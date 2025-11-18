@@ -1,0 +1,150 @@
+en:
+  console:
+    missing_env: "Error: BOT_TOKEN or ADMIN_ID not found in .env file!"
+    bot_info_failed: "Critical error: Failed to get bot info. Check the token."
+    file_load_error: "Error loading file {{file_path}}:"
+    file_save_error: "Error saving file {{file_path}}:"
+
+  duration:
+    expired: "expired"
+    days_suffix: "d"
+    hours_suffix: "h"
+    minutes_suffix: "m"
+    seconds_suffix: "s"
+
+  permissions:
+    admin_only_command: "⛔ This command can only be used by chat administrators."
+    no_menu_permission: "📛 You don't have enough rights to use this menu."
+    no_permission: "📛 You don't have enough rights."
+    no_revoke_permission: "⛔ You don't have permission to revoke this link."
+
+  welcome:
+    group_join: |
+      👋🏻 *Hello everyone!*
+
+      Thanks for adding me to the chat *"{{chat_title}}"*.
+
+      For full functionality I need administrator rights. Please grant them to me.
+    admin_ready: |
+      🎉 *Great!*
+
+      I have been granted administrator rights and I'm ready to work.
+      Use the /linker command to open the link generation menu.
+
+  admin_panel:
+    title_empty: |
+      👑 *Admin panel*
+
+      I'm not added to any chat yet.
+    title_choose_chat: |
+      👑 *Admin panel*
+
+      Select a chat to manage:
+    manage_chat_title: "*Manage chat: {{chat_title}}*"
+    get_chat_failed_alert: "Failed to get chat info. Maybe I was removed."
+    buttons:
+      add_admin: "👑 Promote admin"
+      ban: "🚫 Ban"
+      unban: "✅ Unban"
+      list_linkers: "🔗 Linkers list"
+      revoke_all: "🧹 Revoke all links"
+      back: "⬅️ Back"
+
+  private_chat:
+    not_admin_help: |
+      *Hi 👋🏻! I'm a bot for managing invite links in groups.*
+
+      All my functions work only inside group chats. Add me to a chat and grant me administrator rights.
+    ask_user_id_number: "⚠️ User ID must be a number. Try again."
+    ask_custom_admin_title: "Now enter a custom title for user `{{user_id}}` (for example, \"Moderator\")."
+    user_banned: "✅ User with ID `{{user_id}}` has been banned."
+    ban_failed: "❌ Failed to ban the user. Make sure the ID is correct and I have permissions."
+    user_unbanned: "✅ User with ID `{{user_id}}` has been unbanned."
+    unban_failed: "❌ Failed to unban the user. Maybe they were not banned."
+    admin_promoted: "✅ User `{{user_id}}` has been promoted to admin with title \"{{title}}\"."
+    admin_promote_failed: "❌ Failed to promote user to admin. Make sure the ID is correct, the user is in the chat, and I have permissions."
+    prompt_admin_id: "Enter the user ID to promote to admin."
+    prompt_ban_id: "Enter the user ID to ban."
+    prompt_unban_id: "Enter the user ID to unban."
+
+  commands:
+    linker:
+      menu_title: |
+        👋 *Linker menu*
+
+        Choose an action:
+      main_menu_title: |
+        👋 *Main menu*
+
+        Choose an action:
+      buttons:
+        create_default_full: "🔗 Create link (default 1 user / 30m)"
+        create_with_params: "🔧 Create link with parameters"
+        my_links: "🗑 My active links"
+        help: "❓ Help"
+        create_default_short: "🔗 Create link (default)"
+        revoke: "❌ Revoke"
+        back: "⬅️ Back"
+        link_item: "🔗 {{link_name}}"
+
+    addlinker:
+      need_id: "⚠️ Please specify a user ID. Example: `/addlinker 12345678`"
+      invalid_id: "⚠️ Invalid user ID. Please specify numeric ID."
+      already_in_list: "✅ This user is already in the list."
+      added: "✅ User with ID `{{user_id}}` has been added to the linkers list."
+      error: "❌ An error occurred while adding a linker."
+
+    dellink:
+      need_id: "⚠️ Please specify a user ID. Example: `/dellink 12345678`"
+      invalid_id: "⚠️ Invalid user ID. Please specify numeric ID."
+      not_in_list: "🤔 Such a user is not in the list."
+      removed: "✅ User with ID `{{user_id}}` has been removed from the linkers list."
+      error: "❌ An error occurred while removing a linker."
+
+    link:
+      created: |
+        ✅ Your link {{link_name}} is ready:
+
+        🔗 `{{invite_link}}`
+      timer: "⏱️ Link {{link_name}} will expire in *{{time_left}}*"
+      generic_error: |
+        ⚠️ *Error.*
+        Make sure I'm an admin with the right to invite users.
+
+  help:
+    inline_help: |
+      *ℹ️ Info*
+
+      I'm a bot for creating invite links.
+
+      *Main commands:*
+      - `/linker` - open the link creation menu.
+      - `/link <N> <T><m/h/d/w>` - quickly create a link. For example, `/link 10 1h` will create a link for 10 people for 1 hour.
+      - `+link` - creates a link for 1 person for 30 minutes.
+
+      *Admin commands:*
+      - `/addlinker <ID>` - adds a user to the list of those who can create links.
+      - `/dellink <ID>` - removes a user from the list.
+
+      The creator of the chat, all administrators, and added linkers have permission to use the bot.
+    create_link_prompt_alert: "Creating a link (default 1 user / 30m)..."
+    open_with_args_alert: "Type /link <N> <T> in the chat to create a link with parameters."
+
+  links:
+    none_for_user: "You have no active links."
+    list_for_user: "Your active links:"
+    revoke_success_alert: "✅ Link revoked, messages removed."
+    revoke_error_alert: "⚠️ Error! The link may already be invalid."
+    revoke_all_done_alert: "All links have been revoked."
+    revoke_all_text: "All links have been revoked."
+
+  linkers_admin:
+    list_empty: "There are no added linkers in this chat."
+    list_title: "Linkers list:"
+    list_item_label: "ID: {{user_id}}"
+    remove_button: "Remove"
+    remove_linker_done_alert: "Removed."
+    remove_linker_updated_text: "Updated."
+
+  ui:
+    back: "⬅️ Back"
