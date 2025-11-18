@@ -1,0 +1,21 @@
+{
+  "name": "linker",
+  "version": "1.0.0",
+  "description": "group linker",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "js-yaml": "^4.1.0"
+  }
+}

@@ -1,0 +1,8 @@
+.env
+
+/node_modules
+
+linkers.json
+activeLinks.json
+chatsList.json
+initialMessages.json
